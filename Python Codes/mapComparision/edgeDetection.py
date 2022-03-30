@@ -1,7 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-image = cv2.imread(r'C:\Users\jaypr\Desktop\Map Comparision\assets\hostelGmapping.png')
+image = cv2.imread(
+    r'C:\Users\jaypr\Desktop\Code\Python Codes\mapComparision\assets\hostelGmapping.png')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 hgt, wdt, _ = image.shape
 
@@ -23,13 +24,13 @@ plt.imshow(y_sobel)
 sobel_or = cv2.bitwise_or(x_sobel, y_sobel)
 
 plt.subplot(3, 2, 4)
-plt.imshow(sobel_or)
+# plt.imshow(sobel_or)
 
 laplacian = cv2.Laplacian(image, cv2.CV_64F)
 
 plt.subplot(3, 2, 5)
 plt.title("Laplacian")
-plt.imshow(laplacian)
+# plt.imshow(laplacian)
 
 # There are two values: threshold1 and threshold2.
 # Those gradients that are greater than threshold2 => considered as an edge
@@ -39,6 +40,6 @@ plt.imshow(laplacian)
 
 canny = cv2.Canny(image, 50, 120)
 plt.subplot(3, 2, 6)
-plt.imshow(canny)
+plt.show()
 
 cv2.waitKey(0)

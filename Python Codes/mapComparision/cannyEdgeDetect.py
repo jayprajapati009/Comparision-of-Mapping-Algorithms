@@ -1,13 +1,13 @@
 import cv2 as cv
 from matplotlib import pyplot as plt
 img1 = cv.imread(
-    r'C:\Users\jaypr\Desktop\Map Comparision\assets\hostelGmapping.png', 0)
+    r'C:\Users\jaypr\Desktop\Code\Python Codes\mapComparision\assets\hostelGmapping.png', 0)
 img2 = cv.imread(
-    r'C:\Users\jaypr\Desktop\Map Comparision\assets\hostelHectorslam.png', 0)
+    r'C:\Users\jaypr\Desktop\Code\Python Codes\mapComparision\assets\hostelHectorslam.png', 0)
 img3 = cv.imread(
-    r'C:\Users\jaypr\Desktop\Map Comparision\assets\lobbyGmapping.png', 0)
+    r'C:\Users\jaypr\Desktop\Code\Python Codes\mapComparision\assets\lobbyGmapping.png', 0)
 img4 = cv.imread(
-    r'C:\Users\jaypr\Desktop\Map Comparision\assets\lobbyHectorslam.png', 0)
+    r'C:\Users\jaypr\Desktop\Code\Python Codes\mapComparision\assets\lobbyHectorslam.png', 0)
 
 up_width = 600
 up_height = 400
