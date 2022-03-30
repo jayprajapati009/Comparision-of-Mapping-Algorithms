@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find ghumi_description)/launch/controller.yaml" command="load"/>
+<node args="wheel1_jt_position_controller wheel3_jt_position_controller wheel2_jt_position_controller wheel4_jt_position_controller joint_state_controller " name="controller_spawner" ns="ghumi" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/ghumi/joint_states"/>
+</node>
+
+</launch>

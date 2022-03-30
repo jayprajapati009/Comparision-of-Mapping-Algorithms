@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<robot name="ghumi" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find ghumi_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ghumi_description)/urdf/ghumi.trans" />
+<xacro:include filename="$(find ghumi_description)/urdf/ghumi.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.875033510486827e-14 -2.5418389704730536e-17 0.0523602148573551"/>
+    <mass value="0.75855661596039"/>
+    <inertia ixx="0.001573" ixy="0.0" ixz="0.0" iyy="0.002826" iyz="-0.0" izz="0.003249"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.3290705182007514e-14 0.009999999999999995 -1.734723475976807e-17"/>
+    <mass value="0.05512221016696118"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="2.6e-05" iyz="-0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.04 0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.04 0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.329764407591142e-14 0.010000000000000009 1.734723475976807e-17"/>
+    <mass value="0.055122210166961186"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="2.6e-05" iyz="-0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.04 0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.04 0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.330458296981533e-14 -0.009999999999999981 1.734723475976807e-17"/>
+    <mass value="0.055122210166961186"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="-0.0" iyy="2.6e-05" iyz="-0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.04 -0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.04 -0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.3290705182007514e-14 -0.010000000000000009 -1.734723475976807e-17"/>
+    <mass value="0.05512221016696118"/>
+    <inertia ixx="1.5e-05" ixy="-0.0" ixz="-0.0" iyy="2.6e-05" iyz="0.0" izz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.04 -0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.04 -0.09 -0.03"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="5.026061718855929e-18 -5.580049443460942e-34 0.009999999999999995"/>
+    <mass value="0.059941587830493234"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="1.5e-05" iyz="0.0" izz="2.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://ghumi_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="wheel1_jt" type="continuous">
+  <origin rpy="0 0 0" xyz="0.04 -0.09 0.03"/>
+  <parent link="base_link"/>
+  <child link="wheel_1_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel3_jt" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.04 -0.09 0.03"/>
+  <parent link="base_link"/>
+  <child link="wheel_3_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="wheel2_jt" type="continuous">
+  <origin rpy="0 0 0" xyz="0.04 0.09 0.03"/>
+  <parent link="base_link"/>
+  <child link="wheel_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheel4_jt" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.04 0.09 0.03"/>
+  <parent link="base_link"/>
+  <child link="wheel_4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="lidar_jt" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.1"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>

@@ -1,0 +1,23 @@
+navbot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  w1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: w1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  w2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: w2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  w3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: w3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  w4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: w4
+    pid: {p: 100.0, i: 0.01, d: 10.0}

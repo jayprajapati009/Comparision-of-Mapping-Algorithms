@@ -1,0 +1,383 @@
+<?xml version="1.0" ?>
+<robot name="navbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find navbot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find navbot_description)/urdf/navbot.trans" />
+<xacro:include filename="$(find navbot_description)/urdf/navbot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.552713678800501e-17 -3.1974423109204507e-16 0.022671192333720645"/>
+    <mass value="3.479466849284684"/>
+    <inertia ixx="0.042079" ixy="0.0" ixz="0.0" iyy="0.018671" iyz="0.0" izz="0.060223"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005496075880014134 0.026638282718678546 1.1643357666901721e-09"/>
+    <mass value="0.20794371384790172"/>
+    <inertia ixx="6.8e-05" ixy="-1.3e-05" ixz="-0.0" iyy="4.4e-05" iyz="-0.0" izz="9.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.115 0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.115 0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.005496075880013704 0.026638282718574602 -1.1643405545269658e-09"/>
+    <mass value="0.20794371384790217"/>
+    <inertia ixx="6.8e-05" ixy="1.3e-05" ixz="-0.0" iyy="4.4e-05" iyz="0.0" izz="9.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.115 0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.115 0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00549607588001387 -0.0266382827186791 1.1643358222013234e-09"/>
+    <mass value="0.20794371384790097"/>
+    <inertia ixx="6.8e-05" ixy="-1.3e-05" ixz="0.0" iyy="4.4e-05" iyz="0.0" izz="9.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.115 -0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.115 -0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.005496075880014023 -0.026638282718575185 -1.1643404573824512e-09"/>
+    <mass value="0.207943713847902"/>
+    <inertia ixx="6.8e-05" ixy="1.3e-05" ixz="0.0" iyy="4.4e-05" iyz="-0.0" izz="9.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.115 -0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.115 -0.17 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mid_body_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.08709026707270268 0.19892907010938013 0.039371005512053914"/>
+    <mass value="9.061466311945173"/>
+    <inertia ixx="0.124178" ixy="-0.006509" ixz="-0.004059" iyy="0.05392" iyz="-0.011008" izz="0.148121"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.095 0.18 -0.04425"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/mid_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.095 0.18 -0.04425"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/mid_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_body_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.318260539534942e-08 -0.18176494452952152 -0.014171898071690225"/>
+    <mass value="2.9524172354615117"/>
+    <inertia ixx="0.034502" ixy="0.0" ixz="0.0" iyy="0.009666" iyz="-0.004331" izz="0.042774"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000317 -0.179027 -0.18925"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000317 -0.179027 -0.18925"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02063750000000003 -2.7755575615628914e-16 3.1433189384699745e-15"/>
+    <mass value="0.7868151784300828"/>
+    <inertia ixx="0.000372" ixy="0.0" ixz="0.0" iyy="0.00026" iyz="0.0" izz="0.00026"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.163275 0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.163275 0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02063749999999953 -1.6653345369377348e-16 3.0253577421035516e-15"/>
+    <mass value="0.7868151784300826"/>
+    <inertia ixx="0.000372" ixy="0.0" ixz="0.0" iyy="0.00026" iyz="-0.0" izz="0.00026"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.163275 0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.163275 0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.019367500000000204 -1.1657341758564144e-15 -3.4139358007223564e-15"/>
+    <mass value="0.7868151784300826"/>
+    <inertia ixx="0.000372" ixy="0.0" ixz="0.0" iyy="0.00026" iyz="0.0" izz="0.00026"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.163275 -0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.163275 -0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.02063750000000017 -7.216449660063518e-16 3.1433189384699745e-15"/>
+    <mass value="0.7868151784300828"/>
+    <inertia ixx="0.000372" ixy="-0.0" ixz="-0.0" iyy="0.00026" iyz="0.0" izz="0.00026"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.163275 -0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.163275 -0.159 -0.03175"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/wheel4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_base_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.18019385343792652 0.3033019792664523 0.041061069905298536"/>
+    <mass value="1.0419324974453863"/>
+    <inertia ixx="0.00074" ixy="1e-06" ixz="-2e-06" iyy="0.00041" iyz="-0.000114" izz="0.000906"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.180225 0.265825 -0.170763"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.180225 0.265825 -0.170763"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.172037570394097e-07 1.8841107082827324e-05 0.004936387434682055"/>
+    <mass value="0.2973672103122705"/>
+    <inertia ixx="9.3e-05" ixy="-0.0" ixz="-0.0" iyy="9.4e-05" iyz="-0.0" izz="0.000182"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-9.2e-05 -0.046175 -0.229213"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-9.2e-05 -0.046175 -0.229213"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-6.124271091873055e-08 -0.005000001096143791 3.3578512409482286e-07"/>
+    <mass value="0.13676499047572394"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="0.000117" iyz="-0.0" izz="0.000115"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000317 0.180116 -0.131061"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000317 0.180116 -0.131061"/>
+    <geometry>
+      <mesh filename="package://navbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="m1_bl" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.115 -0.17 0.03175"/>
+  <parent link="base_link"/>
+  <child link="motor1_1"/>
+</joint>
+
+<joint name="m2_bl" type="fixed">
+  <origin rpy="0 0 0" xyz="0.115 -0.17 0.03175"/>
+  <parent link="base_link"/>
+  <child link="motor2_1"/>
+</joint>
+
+<joint name="m4_bl" type="fixed">
+  <origin rpy="0 0 0" xyz="0.115 0.17 0.03175"/>
+  <parent link="base_link"/>
+  <child link="motor4_1"/>
+</joint>
+
+<joint name="m3_bl" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.115 0.17 0.03175"/>
+  <parent link="base_link"/>
+  <child link="motor3_1"/>
+</joint>
+
+<joint name="base_mid" type="fixed">
+  <origin rpy="0 0 0" xyz="0.095 -0.18 0.04425"/>
+  <parent link="base_link"/>
+  <child link="mid_body_1"/>
+</joint>
+
+<joint name="mid_top" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.095317 0.359027 0.145"/>
+  <parent link="mid_body_1"/>
+  <child link="top_body_1"/>
+</joint>
+
+<joint name="w1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.048275 0.011 0.0"/>
+  <parent link="motor1_1"/>
+  <child link="wheel1_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="w2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.048275 0.011 0.0"/>
+  <parent link="motor2_1"/>
+  <child link="wheel2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="w3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.048275 -0.011 0.0"/>
+  <parent link="motor3_1"/>
+  <child link="wheel3_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="w4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.048275 -0.011 0.0"/>
+  <parent link="motor4_1"/>
+  <child link="wheel4_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="lidar_base" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.179908 -0.444852 -0.018487"/>
+  <parent link="top_body_1"/>
+  <child link="lidar_base_1"/>
+</joint>
+
+<joint name="lidar" type="fixed">
+  <origin rpy="0 0 0" xyz="0.180317 0.312 0.05845"/>
+  <parent link="lidar_base_1"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="camera_jt" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.359143 -0.058189"/>
+  <parent link="top_body_1"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
