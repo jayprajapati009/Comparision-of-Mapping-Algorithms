@@ -19,17 +19,17 @@ edges2 = cv.Canny(img2, 100, 500)
 
 
 # Row 1
-plt.subplot(2, 2, 1), plt.imshow(img1, cmap='gray')
+plt.subplot(2, 2, 1), plt.imshow(img2, cmap='gray')
 plt.title('Hostel (HectorSLAM)'), plt.xticks([]), plt.yticks([])
 
-plt.subplot(2, 2, 2), plt.imshow(edges1, cmap='gray')
+plt.subplot(2, 2, 2), plt.imshow(edges2, cmap='gray')
 plt.title('Hostel (HectorSLAM)'), plt.xticks([]), plt.yticks([])
 
 # Row 2
-plt.subplot(2, 2, 3), plt.imshow(img2, cmap='gray')
+plt.subplot(2, 2, 3), plt.imshow(img1, cmap='gray')
 plt.title('Hostel (Cartographer)'), plt.xticks([]), plt.yticks([])
 
-plt.subplot(2, 2, 4), plt.imshow(edges2, cmap='gray')
+plt.subplot(2, 2, 4), plt.imshow(edges1, cmap='gray')
 plt.title('Hostel (Cartographer)'), plt.xticks([]), plt.yticks([])
 
 
